@@ -1,0 +1,314 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :neoFormListLibraries UP-TO-DATE
+> Task :cacheVersionManifest1.21.1 UP-TO-DATE
+> Task :cacheVersionExecutableClient1.21.1 UP-TO-DATE
+> Task :cacheVersionExecutableServer1.21.1 UP-TO-DATE
+> Task :cacheVersionExtractedServer1.21.1 UP-TO-DATE
+> Task :cacheVersionMappingsClient1.21.1 UP-TO-DATE
+> Task :create1.21.1ClientExtraJar UP-TO-DATE
+> Task :selectRawArtifactNg_dummy_ng.net.minecraft_client_1.21.1_client-extra UP-TO-DATE
+> Task :neoFormListTransformLibraries UP-TO-DATE
+> Task :neoFormStripClient UP-TO-DATE
+> Task :neoFormStripServer UP-TO-DATE
+> Task :neoFormMerge UP-TO-DATE
+> Task :neoFormMergeMappings UP-TO-DATE
+> Task :neoFormRename UP-TO-DATE
+> Task :neoFormDecompile UP-TO-DATE
+> Task :neoFormInject UP-TO-DATE
+> Task :neoFormPatch UP-TO-DATE
+> Task :neoFormPatchUserDev UP-TO-DATE
+> Task :neoFormTransformSource UP-TO-DATE
+> Task :neoFormRecompile UP-TO-DATE
+> Task :supplyRawJarForneoFormJoined1.21.1-20240808.144430 UP-TO-DATE
+> Task :selectRawArtifactNg_dummy_ng.net.neoforged_neoforge_21.1.219 UP-TO-DATE
+> Task :verifyLocalMods
+
+> Task :compileJava
+Note: /workspace/LogisticColonies/src/main/java/de/logisticcolonies/command/LogisticsCommands.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :jarJar SKIPPED
+> Task :assemble
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :testBerthScheduler
+BerthSchedulerTest OK
+
+> Task :testBuildingTiers
+BuildingTiersTest OK
+
+> Task :testDetachedReservations
+DetachedReservationsTest OK
+
+> Task :testLogisticsData
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+LogisticsData NBT roundtrip passed
+
+> Task :testLogisticsTagNames
+LogisticsTagNamesTest OK
+
+> Task :testRouteSecurity
+RouteSecurityTest OK
+
+> Task :testShipmentAccounting
+ShipmentAccountingTest OK
+
+> Task :test SKIPPED
+> Task :check UP-TO-DATE
+> Task :build
+> Task :neoFormJoined1.21.1-20240808.144430ExtractNatives UP-TO-DATE
+> Task :writeMinecraftClasspathServer UP-TO-DATE
+
+> Task :runServer
+[15:40:35.654] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.219, --fml.neoFormVersion, 20240808.144430] 
+[15:40:35.660] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Debian OpenJDK 64-Bit Server VM 21.0.12.1+1-1-deb13u1-Debian 
+[15:40:35.666] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.12.1 by Debian; OS Linux arch amd64 version 6.18.57 
+[15:40:36.005] [main/INFO] [loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev 
+[15:40:36.186] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/workspace/work/gradle-home/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23131!/ Service=ModLauncher Env=SERVER 
+[15:40:36.525] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.219.jar" [locator: neoforge devenv provider ([/workspace/LogisticColonies/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.219/neoforge-21.1.219.jar])] 
+[15:40:36.682] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.219.jar" [locator: neoforge devenv provider ([/workspace/LogisticColonies/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.219/neoforge-21.1.219.jar])] 
+[15:40:36.702] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "ae2colonies-1.2.2.jar" [locator: {mods folder locator at /workspace/LogisticColonies/runs/server/mods}, reader: mod manifest] 
+[15:40:36.709] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "createcolony-1.0.0.jar" [locator: {mods folder locator at /workspace/LogisticColonies/runs/server/mods}, reader: mod manifest] 
+[15:40:36.723] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "guideme-21.1.22.jar" [locator: {mods folder locator at /workspace/LogisticColonies/runs/server/mods}, reader: mod manifest] 
+[15:40:36.737] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.819] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "minecolonies-1.1.1403-1.21.1.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.827] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "littlelogistics-mc1.21.1-v1.21.1.1-beta.2.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.833] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "structurize-1.0.835-1.21.1-snapshot.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.839] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "blockui-1.0.210-1.21.1-snapshot.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.846] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "multipiston-1.2.58-1.21.1.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.910] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "domum-ornamentum-1.0.236-snapshot-main.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.941] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "create-1.21.1-6.0.10.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:36.955] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "appliedenergistics2-19.2.18.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:37.010] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.219.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:37.029] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.5.0.jar" [locator: userdev mods and services, reader: mod manifest] 
+[15:40:37.577] [main/WARN] [selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: /workspace/work/gradle-home/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.0/d734b83ce6542bb70ea31755c1595b88992dbe65/mixinextras-neoforge-0.5.0.jar 
+[15:40:37.577] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 4 dependencies adding them to mods collection 
+[15:40:37.580] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "Registrate-MC1.21-1.3.0+67.jar" [parent: create-1.21.1-6.0.10.jar, locator: jarinjar, reader: mod manifest] 
+[15:40:37.580] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "flywheel-neoforge-1.21.1-1.0.6.jar" [parent: create-1.21.1-6.0.10.jar, locator: jarinjar, reader: mod manifest] 
+[15:40:37.580] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "ponder-neoforge-1.0.82+mc1.21.1.jar" [parent: littlelogistics-mc1.21.1-v1.21.1.1-beta.2.jar, locator: jarinjar, reader: mod manifest] 
+[15:40:37.580] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found library file "net.neoforged.neoforge-coremods-21.1.219.jar" [parent: neoforge-21.1.219.jar, locator: jarinjar, reader: mod manifest] 
+[15:40:37.583] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		AE2 Colonies 1.2.2 (ae2colonies)
+		Applied Energistics 2 19.2.18 (ae2)
+		Create 6.0.10 (create)
+		Create: Colony 1.0.0 (createcolony)
+		Domum Ornamentum 1.0.236-snapshot (domum_ornamentum)
+		Flywheel 1.0.6 (flywheel)
+		GuideME 21.1.22 (guideme)
+		Little Logistics 1.21.1.1-beta.2 (littlelogistics)
+		LogisticColonies 0.4.0-dev (logisticcolonies)
+		MineColonies 1.1.1403-1.21.1 (minecolonies)
+		Minecraft 1.21.1 (minecraft)
+		Multi-Piston 1.2.58-1.21.1 (multipiston)
+		NeoForge 21.1.219 (neoforge)
+		Ponder 1.0.82+mc1.21.1 (ponder)
+		Structurize 1.0.835-1.21.1-snapshot (structurize)
+		UI Library Mod 1.0.210-1.21.1-snapshot (blockui) 
+[15:40:39.100] [main/INFO] [mixin/]: Compatibility level set to JAVA_21 
+[15:40:39.147] [main/INFO] [LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .] 
+[15:40:39.264] [main/WARN] [mixin/]: Reference map 'ponder.refmap.json' for ponder-common.mixins.json could not be read. If this is a development environment you can ignore this message 
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[15:40:40] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[15:40:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:40:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:40:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[15:40:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[15:40:59] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[15:40:59] [modloading-worker-0/INFO] [co.si.cr.Create/]: Create 6.0.10 initializing! Commit hash: ac0c444d9828da3453ae8cc65338e8de063286fb
+[15:41:01] [modloading-worker-0/INFO] [ae2colonies/]: AE2Colonies initializing...
+[15:41:01] [modloading-worker-0/INFO] [ae2colonies/]: AE2Colonies registries registered.
+[15:41:01] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.219, for MC 1.21.1
+[15:41:07] [modloading-worker-0/INFO] [co.se.cr.ColonyMain/]: Create Colonial Setup
+[15:41:07] [modloading-worker-0/INFO] [co.se.cr.ColonyMain/]: Blueprint Support: true
+[15:41:07] [modloading-worker-0/INFO] [co.se.cr.ColonyMain/]: Clipboard Integration: true
+[15:41:07] [modloading-worker-0/INFO] [co.se.cr.ColonyMain/]: Builder AI Extensions: true
+[15:41:07] [NeoForge Version Check/INFO] [ne.ne.fm.VersionChecker/]: [create] Starting version check at https://api.modrinth.com/updates/create/forge_updates.json?neoforge=only
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Jungle Treehouse
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Pagoda
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Stalactite Caves
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Fortress
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Colonial
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Spruce
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Lost Mesa City
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Dark Oak
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Urban Birch
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Birch
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Shire
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Incan
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Ancient Athens
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Medieval Oak
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Urban Savanna
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Desert Oasis
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Minecolonies Original
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Cavern
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Dark Oak Treehouse
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Nordic Spruce
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Space Wars
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Caledonia
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: Warped Netherlands
+[15:41:07] [Structurize IO Worker #0/INFO] [structurize/]: Registered structure pack: LogisticColonies Industrial
+[15:41:07] [Structurize IO Worker #0/WARN] [structurize/]: Failed loading packs from main folder path: .
+[15:41:07] [Structurize IO Worker #0/WARN] [structurize/]: Failed loading client packs from main folder path: .
+[15:41:07] [Structurize IO Worker #0/WARN] [structurize/]: Finished discovering Server Structure packs
+[15:41:08] [modloading-worker-0/WARN] [minecolonies/]: Register mappings
+[15:41:08] [modloading-sync-worker/INFO] [co.se.cr.ColonyMain/]: Network Handler registered via PayloadRegistrar
+[15:41:08] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[15:41:08] [Yggdrasil Key Fetcher/ERROR] [mojang/YggdrasilServicesKeyInfo]: Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://api.minecraftservices.com/publickeys due to Connection refused
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:108) ~[authlib-6.0.54.jar%23109!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:57) ~[authlib-6.0.54.jar%23109!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114) ~[authlib-6.0.54.jar%23109!/:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89) ~[authlib-6.0.54.jar%23109!/:?] {}
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?] {}
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?] {}
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[?:?] {}
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694) ~[?:?] {}
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[?:?] {}
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[?:?] {}
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[?:?] {}
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[?:?] {}
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[?:?] {}
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178) ~[?:?] {}
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:539) ~[?:?] {}
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:644) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:265) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:378) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:196) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1305) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1146) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1075) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:181) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1707) ~[?:?] {}
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1632) ~[?:?] {}
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531) ~[?:?] {}
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?] {}
+	at MC-BOOTSTRAP/authlib@6.0.54/com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:84) ~[authlib-6.0.54.jar%23109!/:?] {}
+	... 9 more
+[15:41:08] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/workspace/LogisticColonies/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.219/neoforge-21.1.219.jar%23186!/assets/.mcassetsroot' uses unexpected schema
+[15:41:08] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/workspace/LogisticColonies/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.219/neoforge-21.1.219.jar%23186!/data/.mcassetsroot' uses unexpected schema
+[15:41:08] [main/INFO] [co.si.cr.Create/]: Created 157 recipes which will be injected into the game
+[15:41:08] [main/INFO] [co.si.cr.Create/]: Created 0 tags which will be injected into the game
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SpawnExtraGridTestTools for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.QnbTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InscriberTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.AnnihilationPlaneTests for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.TestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.P2PTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.PatternProviderPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SubnetPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.GuidebookPlot for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.CrystalResonanceGeneratorTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InterfaceTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.PatternProviderLockModePlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InvalidPatternTestPlot for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ChannelTests for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.AutoCraftingTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ExternalEnergyTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ItemP2PTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.MemoryCardTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SpatialTestPlots for plots
+[15:41:10] [Worker-Main-1/INFO] [AE2:C/]: Scanning class appeng.server.testplots.CraftingTerminalTestPlots for plots
+[15:41:12] [main/INFO] [minecraft/RecipeManager]: Loaded 3651 recipes
+[15:41:13] [NeoForge Version Check/WARN] [ne.ne.fm.VersionChecker/]: Failed to process update information
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:955) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133) ~[java.net.http:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.openUrlString(VersionChecker.java:129) ~[loader-4.0.42.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.process(VersionChecker.java:162) ~[loader-4.0.42.jar%23139!/:4.0] {}
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) [?:?] {re:mixin}
+	at MC-BOOTSTRAP/fml_loader@4.0.42/net.neoforged.fml.VersionChecker$1.run(VersionChecker.java:105) [loader-4.0.42.jar%23139!/:4.0] {}
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1065) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202) ~[?:?] {}
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786) ~[?:?] {}
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874) ~[?:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210) ~[java.net.http:?] {}
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571) ~[?:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280) ~[java.net.http:?] {}
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238) ~[java.net.http:?] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?] {}
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?] {}
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?] {}
+[15:41:14] [main/INFO] [minecraft/AdvancementTree]: Loaded 3213 advancements
+[15:41:14] [main/INFO] [minecolonies/]: Beginning load of custom recipes for colony workers
+[15:41:14] [main/INFO] [minecolonies/]: Loaded 161 recipes for 16 crafters
+[15:41:14] [main/INFO] [minecolonies/]: Research loading...
+[15:41:14] [main/INFO] [minecolonies/]: Research loaded. Located 4 branches, 217 researches and 106 effects.
+[15:41:14] [main/INFO] [minecolonies/]: Loading quests from data
+[15:41:14] [main/INFO] [minecolonies/]: Finished loading quests from data
+[15:41:14] [main/WARN] [minecolonies/]: Read 1634 items with their nbt keys for compatibility.
+[15:41:14] [main/INFO] [minecolonies/]: [Study items Loader]: Starting reload...
+[15:41:14] [main/INFO] [minecolonies/]: [Study items Loader]: Finished reloading. 2 entries created.
+[15:41:16] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.21.1
+[15:41:16] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[15:41:16] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[15:41:16] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[15:41:17] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25575
+[15:41:17] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[15:41:17] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:41:17] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[15:41:17] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:41:17] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:41:17] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "logisticcolonies-selftest"
+[15:41:17] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[15:41:17] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[15:41:18] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[15:41:18] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 702 ms
+[15:41:18] [Server thread/INFO] [minecraft/DedicatedServer]: Done (1.094s)! For help, type "help"
+[15:41:18] [Server thread/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: []
+[15:41:18] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[15:41:18] [Server thread/INFO] [ae2colonies/]: WarehouseMEBridge reset for new server
+ItemMover capacity, filtering, rollback and conservation passed
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: LogisticColonies selftest OK: Inventartransfers und 15 Structurize-Baupläne
+[15:41:18] [Server thread/INFO] [de.lo.LogisticColonies/]: LogisticColonies automated server selftest result: 15
+[15:41:18] [Server thread/INFO] [ae2colonies/]: WarehouseMEBridge: shutdown flag set
+[15:41:18] [Server thread/INFO] [ae2colonies/]: Cleared WarehouseMEBridge terminal caches
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[15:41:18] [Server thread/INFO] [ae2colonies/]: [AE2Colonies] Bypassing NeoForge infinite chunk spin loop immediately, proceeding directly to world save.
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[logisticcolonies-selftest]'/minecraft:overworld
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[logisticcolonies-selftest]'/minecraft:the_nether
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[logisticcolonies-selftest]'/minecraft:the_end
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[logisticcolonies-selftest]'/ae2:spatial_storage
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (logisticcolonies-selftest): All chunks are saved
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[15:41:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[15:41:18] [Server thread/INFO] [ae2colonies/]: Cleared WarehouseMEBridge terminal caches
+
+[Incubating] Problems report is available at: file:///workspace/LogisticColonies/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 1m 25s
+37 actionable tasks: 12 executed, 25 up-to-date

@@ -1,0 +1,172 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.gradle.userdev' version '7.1.38'
+}
+
+// Only the explicitly configured client/server runs are needed. Core checks use
+// JavaExec, while registry-dependent checks run through the loaded server.
+subsystems.conventions.runs.shouldDefaultRunsBeCreated.set(false)
+
+version = '0.5.0-dev'
+group = 'de.logisticcolonies'
+base { archivesName = 'logisticcolonies' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.neoforged.net/releases' }
+}
+
+// Copy the original mod files into libs/. Do not redistribute third-party jars.
+def requiredLocalMods = [
+    'minecolonies-1.1.1403-1.21.1.jar',
+    'littlelogistics-mc1.21.1-v1.21.1.1-beta.2.jar',
+    'structurize-1.0.835-1.21.1-snapshot.jar',
+    'blockui-1.0.210-1.21.1-snapshot.jar',
+    'multipiston-1.2.58-1.21.1.jar',
+    'domum-ornamentum-1.0.236-snapshot-main.jar'
+]
+def optionalLocalMods = [
+    'create-1.21.1-6.0.10.jar',
+    'appliedenergistics2-19.2.18.jar'
+]
+def localMods = requiredLocalMods + optionalLocalMods
+
+configurations {
+    localRuntime
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    implementation 'net.neoforged:neoforge:21.1.219'
+    localMods.each { filename ->
+        if (file("libs/${filename}").exists()) {
+            compileOnly files("libs/${filename}")
+            // Dev client/server requires all dependencies actually installed as mods.
+            localRuntime files("libs/${filename}")
+        } else if (requiredLocalMods.contains(filename)) {
+            logger.warn("Missing local dev dependency: libs/${filename}")
+        }
+    }
+}
+
+def verifyLocalMods = tasks.register('verifyLocalMods') {
+    group = 'verification'
+    description = 'Reports missing required mod jars before Java compilation.'
+    doLast {
+        def missing = requiredLocalMods.findAll { !file("libs/${it}").isFile() }
+        if (!missing.isEmpty()) {
+            throw new GradleException('Required development mods are missing from libs/:\n  '
+                + missing.join('\n  ') + '\nSee libs/README.md. Create and AE2 are optional.')
+        }
+    }
+}
+tasks.named('compileJava') { dependsOn verifyLocalMods }
+
+runs {
+    configureEach {
+        modSource sourceSets.main
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'info'
+    }
+    client { }
+    server {
+        if (project.hasProperty('logisticcoloniesSelfTest'))
+            systemProperty 'logisticcolonies.selftest', 'true'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+// These checks are plain Java main() programs, not JUnit tests.
+// Run them explicitly with assertions enabled, including during `gradle test` / `gradle build`.
+tasks.register('testBuildingTiers', JavaExec) {
+    group = 'verification'
+    description = 'Checks capacity limits and level progression.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.BuildingTiersTest'
+    enableAssertions = true
+}
+
+tasks.register('testBerthScheduler', JavaExec) {
+    group = 'verification'
+    description = 'Checks dock scheduling and fairness.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.BerthSchedulerTest'
+    enableAssertions = true
+}
+
+tasks.register('testLogisticsTagNames', JavaExec) {
+    group = 'verification'
+    description = 'Checks tag names for tracks, ship docks and paired storage markers.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.LogisticsTagNamesTest'
+    enableAssertions = true
+}
+
+tasks.named('test', Test) {
+    // No @Test-annotated methods exist yet: the JavaExec tasks above run the checks.
+    dependsOn tasks.named('testBuildingTiers'), tasks.named('testBerthScheduler'), tasks.named('testLogisticsTagNames')
+}
+
+// Reproducible, mod-independent checks for cross-colony authorization and reservation keys.
+tasks.register('testShipmentAccounting', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.ShipmentAccountingTest'
+    enableAssertions = true
+}
+
+tasks.register('testRouteSecurity', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.RouteSecurityTest'
+    enableAssertions = true
+}
+
+tasks.named('test', Test) {
+    dependsOn tasks.named('testShipmentAccounting'), tasks.named('testRouteSecurity')
+}
+
+tasks.register('testDetachedReservations', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.DetachedReservationsTest'
+    enableAssertions = true
+}
+tasks.named('test', Test) { dependsOn tasks.named('testDetachedReservations') }
+
+tasks.register('testLogisticsData', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.LogisticsDataTest'
+    enableAssertions = true
+}
+tasks.named('test', Test) { dependsOn tasks.named('testLogisticsData') }
+
+// Plain Java checks run explicitly; a NeoForge game runtime is needed for item registries.
+tasks.named('test', Test) {
+    enabled = false
+    setDependsOn(['testBuildingTiers', 'testBerthScheduler', 'testLogisticsTagNames',
+        'testShipmentAccounting', 'testRouteSecurity', 'testDetachedReservations', 'testLogisticsData'])
+}
+// NeoGradle also generates testJunit (a game launch). This project uses explicit
+// JavaExec checks plus /logisticcolonies selftest in the loaded game instead.
+// Keep `build` independent of client assets and native display libraries.
+tasks.named('check') { setDependsOn(['test']) }
+
+tasks.register('testTrafficArbiter', JavaExec) {
+    group = 'verification'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'de.logisticcolonies.logistics.TrafficArbiterTest'
+    enableAssertions = true
+}
+tasks.named('test', Test) { dependsOn tasks.named('testTrafficArbiter') }
